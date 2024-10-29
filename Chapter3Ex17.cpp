@@ -37,6 +37,7 @@ int main()
 	int Value1 = randomValue(mathTutor);
 	int Value2 = randomValue(mathTutor);
 	int Solution = Value1 + Value2;
+	int Answer;
 
 	cout << "----------[Math Tutor]----------" << endl;
 	cout << endl;
@@ -54,16 +55,30 @@ int main()
 	cout << endl;
 	cout << "This program will now pause so that" << endl;
 	cout << "you may work to solve the equation." << endl;
-	cout << "When you are ready to see the answer," << endl;
-	cout << "press [Enter] to view the solution." << endl;
-	cin.get();
+	cout << "When you are ready to submit your" << endl;
+	cout << "answer, type the number below and" << endl;
+	cout << "press [Enter] to continue..." << endl;
 	cout << endl;
-	cout << " " << Value1 << endl;
-	cout << "+" << Value2 << endl;
-	cout << "-----" << endl;
-	cout << " " << Solution << endl;
-
-
+	cin >> Answer;
+	cout << endl;
+	if (Answer == Solution)
+	{
+		cout << " " << Value1 << endl;
+		cout << "+" << Value2 << endl;
+		cout << "-----" << endl;
+		cout << " " << Solution << endl;
+		cout << endl;
+		cout << "You are correct!" <<endl;
+	}
+	else
+	{
+		cout << " " << Value1 << endl;
+		cout << "+" << Value2 << endl;
+		cout << "-----" << endl;
+		cout << " " << Solution << endl;
+		cout << endl;
+		cout << "You answer was not correct.";
+	}
 
 
 }
